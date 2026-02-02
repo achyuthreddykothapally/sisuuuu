@@ -88,19 +88,17 @@
       const questionDiv = document.getElementById("question");
       const resultDiv = document.getElementById("result");
 
+      questionDiv.style.display = "none";
+      resultDiv.style.display = "block";
+
       if(answer === 'yes') {
         resultDiv.innerText = "❤️ I love you more! ❤️";
-        resultDiv.style.display = "block";
         createHearts(20); // generate 20 hearts
       } else {
         resultDiv.innerText = "💔 I hate you! 💔";
-        resultDiv.style.display = "block";
         resultDiv.classList.add("shake");
-        // remove shake class after animation
         setTimeout(() => resultDiv.classList.remove("shake"), 500);
       }
-
-      questionDiv.style.display = "none";
     }
 
     // Function to create floating hearts
@@ -113,7 +111,6 @@
         heart.innerText = "❤️";
         document.body.appendChild(heart);
 
-        // remove heart after animation
         setTimeout(() => heart.remove(), 1500);
       }
     }
