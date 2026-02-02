@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Do you love me?</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Sister Loves Me ❤️</title>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #ffe6ea;
+      padding-top: 80px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 12px 25px;
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e63950;
+    }
+
+    #result {
+      display: none;
+      margin-top: 30px;
+      font-size: 26px;
+      color: #d1003f;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="question-container container">
-<video class="local-gif" src="Reply me love.mp4" autoplay muted loop></video>
-  <h2 class="question">Do you love me?</h2>
-  <div class="button-container">
-    <button class="yes-btn btn js-yes-btn">Yes</button>
-    <button class="no-btn btn js-no-btn">No</button>
-  </div>
-</div>
-<div class="result-container container">
-  <video class="gif-result" src="Love me.mp4" autoplay loop></video>
-  <h2>I knew it😍!</h2>
-</div>
+  <h1>Click the button 💖</h1>
 
-<div class="cssload-main">
-  <div class="cssload-heart">
-    <span class="cssload-heartL"></span>
-    <span class="cssload-heartR"></span>
-    <span class="cssload-square"></span>
+  <button onclick="showResult()">Click Me</button>
+
+  <div id="result">
+    ❤️ My sister loves me forever ❤️
   </div>
-  <div class="cssload-shadow"></div>
-</div>
-<script src="script.js"></script>
+
+  <script>
+    function showResult() {
+      document.getElementById("result").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
